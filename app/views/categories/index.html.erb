@@ -1,3 +1,5 @@
 <% @category.each do |category| %>
- <a href='/categories/<%= category.id %>'><%= category.name %></a> 
-<% end %>
+ <a href='/categories/<%= category.id %>'><%= category.name %></a> <br>
+<% end %> <br>
+
+<%= link_to  "Add a New Category", new_category_path %>

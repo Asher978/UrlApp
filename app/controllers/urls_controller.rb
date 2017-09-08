@@ -5,4 +5,7 @@ class UrlsController < ApplicationController
         Url.create(url: url['url'], (description: url['description'])
         redirect_to categories_path
     end
+
+    def show
+    end
 end

@@ -1,0 +1,8 @@
+
+<%= form_for :url, method: 'post', url: {action: 'create'} do |f| %>
+    <%= label(:url, :url) %>
+    <%= f.text_field :url %><br>
+    <%= label(:url, :description) %>
+    <%= f.text_field :description %><br>
+    <%= f.submit "Add New URL" %>
+<% end %>

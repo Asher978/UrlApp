@@ -2,5 +2,6 @@
 <h1><%= @category.name %></h1> <br>
 <p><%= @category.description %></p>
 
+<%= link_to  "Add a New URL", new_category_url_path(:category_id) %>
 <%= link_to 'Delete Category', @category, method: :delete %> <br>
 <%= link_to  "Back to Categories", root_path %>

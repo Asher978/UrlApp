@@ -1,4 +1,6 @@
 
-<%= @category.name %> <br>
+<h1><%= @category.name %></h1> <br>
+<p><%= @category.description %></p>
 
+<%= link_to 'Delete Category', @category, method: :delete %> <br>
 <%= link_to  "Back to Categories", root_path %>

@@ -10,7 +10,12 @@ class CategoriesController < ApplicationController
 
     def create
         category = params['category']
-        Category.create(name: category['name'])
+        Category.create(name: category['name'], description: category['description'])
+        redirect_to categories_path
+    end
+    
+    def destroy
+        Category.destroy(params['id'])
         redirect_to categories_path
     end
 end

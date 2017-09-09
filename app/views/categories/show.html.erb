@@ -1,7 +1,12 @@
 
 <h1><%= @category.name %></h1> <br>
 <p><%= @category.description %></p>
+<% @category.urls.each do |url| %>
+    <h1><%= url.description %></h1>
+<% end %>
 
-<%= link_to  "Add a New URL", new_category_url_path(:category_id) %>
+
+
+<%= link_to  "Add a New URL", new_category_url_path(params[:id]) %>
 <%= link_to 'Delete Category', @category, method: :delete %> <br>
 <%= link_to  "Back to Categories", root_path %>

@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
 
     def create
         category = params['category']
-        Category.create(name: category['name'], description: category['description'])
+        Category.create!(name: category['name'], description: category['description'])
         redirect_to categories_path
     end
     

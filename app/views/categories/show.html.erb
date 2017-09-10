@@ -1,8 +1,9 @@
-
+<%= render 'navbar' %>
 <h1><%= @category.name %></h1> <br>
 <p><%= @category.description %></p>
 <% @category.urls.each do |url| %>
-    <h1><%= url.description %></h1>
+    <h1><%= url.url %></h1>
+    <h3><%= url.description %></h3>
 <% end %>
 
 

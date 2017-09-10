@@ -1,5 +1,7 @@
-<% @category.each do |category| %>
- <a href='/categories/<%= category.id %>'><%= category.name %></a> <br>
-<% end %> <br>
+<%= render 'navbar' %>
 
-<%= link_to  "Add a New Category", new_category_path %>
+<div class="container marketing">
+    <% @category.each do |category| %>
+    <a href='/categories/<%= category.id %>'><%= category.name %></a> <br>
+    <% end %> <br>
+</div>

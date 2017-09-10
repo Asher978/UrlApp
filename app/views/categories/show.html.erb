@@ -1,13 +1,17 @@
 <%= render 'navbar' %>
-<h1><%= @category.name %></h1> <br>
-<p><%= @category.description %></p>
-<% @category.urls.each do |url| %>
-    <h1><%= url.url %></h1>
-    <h3><%= url.description %></h3>
-<% end %>
+<div class="container marketing">    
+    <h1><%= @category.name %>&nbsp;<%= link_to content_tag('i', '', class: 'icon-trash icon-fixed-width'), @category, method: :delete %></h1>
+    <p><%= @category.description %></p>
+    <% @category.urls.each do |url| %>
+        <h1><%= url.url %></h1>
+        <h3><%= url.description %></h3>
+    <% end %>
+</div>
 
 
 
 <%= link_to  "Add a New URL", new_category_url_path(params[:id]) %>
 <%= link_to 'Delete Category', @category, method: :delete %> <br>
+
+
 <%= link_to  "Back to Categories", root_path %>

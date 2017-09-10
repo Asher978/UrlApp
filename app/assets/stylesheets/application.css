@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ .icon-trash  {
+     color: red;
+ }
+
+ .form-signin {
+    max-width: 600px;
+    padding: 15px;
+    margin: 0 auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }

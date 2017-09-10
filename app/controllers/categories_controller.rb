@@ -8,10 +8,18 @@ class CategoriesController < ApplicationController
         @category = Category.find_by(id: params[:id])
     end
 
+    def new
+        @cat = Category.new
+    end
+
     def create
         category = params['category']
-        Category.create!(name: category['name'], description: category['description'])
-        redirect_to categories_path
+        @cat = Category.create(name: category['name'], description: category['description'])
+        if (@cat.save)
+            redirect_to categories_path
+        else
+            render 'new'
+        end
     end
     
     def destroy

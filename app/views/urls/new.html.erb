@@ -1,22 +1,20 @@
 <%= render 'navbar' %>
 
-            <div class="container">
-                <%= form_for :url, method: 'post', html: {class: "form-signin"}, url: {action: 'create'} do |f| %>
-                    <% if @url.errors.any? %>
-                        <% @url.errors.full_messages.each do |msg| %>
-                            <div class="alert alert-danger"><%= msg %></div>
-                        <% end %>
+            <%= form_for :url, method: 'post', html: {class: "form-signin"}, url: {action: 'create'} do |f| %>
+                <% if @url.errors.any? %>
+                    <% @url.errors.full_messages.each do |msg| %>
+                        <div class="alert alert-danger"><%= msg %></div>
                     <% end %>
-                    <h2 class="form-signin-heading">Fill the info below to add your fav docs</h2>
-                    <%= label(:url, :name) %>
-                    <%= f.text_field :name, class: "form-control" %>
-                    <%= label(:url, :url) %>
-                    <%= f.text_field :url, class: "form-control" %>
-                    <%= label(:url, :description) %>
-                    <%= f.text_area :description, class: "form-control" %>
-                    <%= f.submit "Add New URL", class: "btn btn-lg btn-primary btn-block" %>
                 <% end %>
-            </div>
+                <h2 class="form-signin-heading">Fill the info below to add your fav docs</h2>
+                <%= label(:url, :name) %>
+                <%= f.text_field :name, class: "form-control" %>
+                <%= label(:url, :url) %>
+                <%= f.text_field :url, class: "form-control" %>
+                <%= label(:url, :description) %>
+                <%= f.text_area :description, class: "form-control" %>
+                <%= f.submit "Add New URL", class: "btn btn-lg btn-primary btn-block" %>
+            <% end %>
         </div>
     </div>
 </div>

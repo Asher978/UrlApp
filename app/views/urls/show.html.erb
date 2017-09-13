@@ -1,10 +1,13 @@
 <%= render 'navbar' %>
 
-<div class="container marketing">
-    <div class="well">
-        <h3><%= @url.name.upcase %>&nbsp;<%= link_to content_tag('i', '', class: 'icon-trash'), @category, method: :delete %></h3>
-        <%= link_to @url.name, @url.url, :target => "_blank" %>
-        <p><%= @url.description %></p>
+            <div class="container marketing">
+                <div class="well">
+                    <h3><%= @url.name.upcase %>&nbsp;<%= link_to content_tag('i', '', class: 'icon-trash'), @category, method: :delete %></h3>
+                    <%= link_to @url.name, @url.url, :target => "_blank" %>
+                    <p><%= @url.description %></p>
+                </div>
+            </div>
+        </div>          
     </div>
-<div>
+</div>
 

@@ -1,17 +1,20 @@
 <%= render 'navbar' %>
 
-<div class="container">
-    <%= form_for :category, method: 'post', html: {class: "form-signin"}, url: {action: 'create'} do |f| %>
-        <% if @cat.errors.any? %>
-            <% @cat.errors.full_messages.each do |msg| %>
-                <div class="alert alert-danger"><%= msg %></div>
-            <% end %>
-        <% end %>
-        <h2 class="form-signin-heading">Please fill the required info to add a category</h2>
-        <%= label(:category, :name) %>
-        <%= f.text_field :name, class: "form-control" %>
-        <%= label(:category, :description) %>
-        <%= f.text_area :description, class: "form-control" %>
-        <%= f.submit "Add New Category", class: "btn btn-lg btn-primary btn-block" %>
-    <% end %>
+            <div class="container">
+                <%= form_for :category, method: 'post', html: {class: "form-signin"}, url: {action: 'create'} do |f| %>
+                    <% if @cat.errors.any? %>
+                        <% @cat.errors.full_messages.each do |msg| %>
+                            <div class="alert alert-danger"><%= msg %></div>
+                        <% end %>
+                    <% end %>
+                    <h2 class="form-signin-heading">Please fill the required info to add a category</h2>
+                    <%= label(:category, :name) %>
+                    <%= f.text_field :name, class: "form-control" %>
+                    <%= label(:category, :description) %>
+                    <%= f.text_area :description, class: "form-control" %>
+                    <%= f.submit "Add New Category", class: "btn btn-lg btn-primary btn-block" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </div>

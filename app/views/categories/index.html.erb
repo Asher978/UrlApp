@@ -1,10 +1,13 @@
 <%= render 'navbar' %>
 
-<div class="container marketing">
-    <% @category.each do |category| %>
-        <div class="well">
-            <h1><%= category.name %></h1>
-            <%= link_to  "Details", category_path(category), :class => 'btn btn-danger' %>
+            <div class="container marketing">
+                <% @category.each do |category| %>
+                    <div class="well">
+                        <h1><%= category.name %></h1>
+                        <%= link_to  "Details", category_path(category), :class => 'btn btn-danger' %>
+                    </div>
+                <% end %>
+            </div>
         </div>
-    <% end %>
+    </div>
 </div>

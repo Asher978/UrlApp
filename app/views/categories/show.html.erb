@@ -1,15 +1,13 @@
 <%= render 'navbar' %>
-            <div class="container marketing">
-                <div class="well">    
-                    <h1><%= @category.name %>&nbsp;<%= link_to content_tag('i', '', class: 'icon-trash icon-fixed-width'), @category, method: :delete %></h1>
-                    <%= link_to  "Add a New URL", new_category_url_path(params[:id]), :class => 'btn btn-danger' %>
-                    <p><%= @category.description %></p>
-                </div>
-                <% @category.urls.each do |url| %>
-                    <h3><%= url.name %></h3>
-                    <%= link_to  "Details", category_url_path(params[:id], url), :class => 'btn btn-danger' %>
-                <% end %>
+            <div class="well">    
+                <h1><%= @category.name %>&nbsp;<%= link_to content_tag('i', '', class: 'icon-trash icon-fixed-width'), @category, method: :delete %></h1>
+                <%= link_to  "Add a New URL", new_category_url_path(params[:id]), :class => 'btn btn-danger' %>
+                <p><%= @category.description %></p>
             </div>
+            <% @category.urls.each do |url| %>
+                <h3><%= url.name %></h3>
+                <%= link_to  "Details", category_url_path(params[:id], url), :class => 'btn btn-danger' %>
+            <% end %>
         </div>
     </div>
 </div>

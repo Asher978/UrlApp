@@ -1,3 +1,40 @@
-<%= render 'navbar' %>
+<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">FAVDOCS</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                    <li><%= link_to  "Home", "/" %></li>
+                    <li><%= link_to  "Categories", "/categories" %></li>
+                    <li><%= link_to  "Add a New Category", new_category_path %></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Looking for your Fav Docs!!</h1>
+            <p class="lead">You have come to the right place. Here you can browse through some the provided DOCS or create your own categories and list your fav docs. More you add the more it will be helpful to others!</p>
+            <p class="lead">
+              <%= link_to  "Browse through Categories", "/categories" %>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Site brought to you by, <a href="https://asher.io">Ash S©</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
 

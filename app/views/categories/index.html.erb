@@ -2,6 +2,9 @@
 
 <div class="container marketing">
     <% @category.each do |category| %>
-    <a href='/categories/<%= category.id %>'><%= category.name %></a> <br>
-    <% end %> <br>
+        <div class="well">
+            <h1><%= category.name %></h1>
+            <%= link_to  "Details", category_path(category), :class => 'btn btn-danger' %>
+        </div>
+    <% end %>
 </div>

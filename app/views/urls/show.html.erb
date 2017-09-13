@@ -1,0 +1,9 @@
+<%= render 'navbar' %>
+
+<div class="container marketing">
+    <div class="well">
+        <h1><%= @url.url %><%= link_to content_tag('i', '', class: 'icon-trash icon-fixed-width'), @category, method: :delete %></h1>
+        <p><%= @url.description %></p>
+    </div>
+<div>
+

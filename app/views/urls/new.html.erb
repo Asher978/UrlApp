@@ -1,8 +1,17 @@
-<h1>Add a New URL</h1>
-<%= form_for :url, method: 'post', url: {action: 'create'} do |f| %>
-    <%= label(:url, :url) %>
-    <%= f.text_field :url %><br>
-    <%= label(:url, :description) %>
-    <%= f.text_area :description %><br>
-    <%= f.submit "Add New URL" %>
-<% end %>
+<%= render 'navbar' %>
+
+<div class="container">
+    <%= form_for :url, method: 'post', html: {class: "form-signin"}, url: {action: 'create'} do |f| %>
+        <% if @url.errors.any? %>
+            <% @url.errors.full_messages.each do |msg| %>
+                <div class="alert alert-danger"><%= msg %></div>
+            <% end %>
+        <% end %>
+        <h2 class="form-signin-heading">Fill the info below to add your fav docs</h2>
+        <%= label(:url, :url) %>
+        <%= f.text_field :url, class: "form-control" %>
+        <%= label(:url, :description) %>
+        <%= f.text_area :description, class: "form-control" %>
+        <%= f.submit "Add New URL", class: "btn btn-lg btn-primary btn-block" %>
+    <% end %>
+</div>

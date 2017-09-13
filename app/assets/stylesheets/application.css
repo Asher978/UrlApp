@@ -14,14 +14,18 @@
  *= require_self
  */
 
- .icon-trash  {
-     color: red;
- }
+body {
+  background-color: rgba(0,0,0,0.3)
+}
 
- .form-signin {
-    max-width: 600px;
-    padding: 15px;
-    margin: 0 auto;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+ .icon-trash  {
+   color: red;
+}
+
+.form-signin {
+  max-width: 600px;
+  padding: 15px;
+  margin: 0 auto;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

@@ -8,6 +8,8 @@
             <% end %>
         <% end %>
         <h2 class="form-signin-heading">Fill the info below to add your fav docs</h2>
+        <%= label(:url, :name) %>
+        <%= f.text_field :name, class: "form-control" %>
         <%= label(:url, :url) %>
         <%= f.text_field :url, class: "form-control" %>
         <%= label(:url, :description) %>
